@@ -1,0 +1,23 @@
+{
+  "name": "sdet-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skngetich/sdet-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skngetich/sdet-test/issues"
+  },
+  "homepage": "https://github.com/skngetich/sdet-test#readme",
+  "devDependencies": {
+    "cypress": "^13.2.0"
+  }
+}
