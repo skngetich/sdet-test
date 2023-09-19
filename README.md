@@ -40,6 +40,13 @@ The SQl queries help in the following way:
 
 ## Question 3
 
+`sort.js` implements Question 3
+
+To run
+```
+node sort.js
+```
+
 I would pass a list product from to the function and check of it return the product according to the sorting order specified
 for ascending I would check if it the first item in the list has the less price compared to the second and third.
 for decending I would chekc if the the first item on the list has a higher price compared to the second and third item.
