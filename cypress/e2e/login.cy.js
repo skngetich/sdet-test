@@ -4,11 +4,28 @@ describe("Login Test", () => {
     cy.visit("../../login.html");
   })
   
+
+ 
   it('should visit the page',()=>{
         cy.get('form').should('exist')
   })
 
-  it("should check if login element exist",()=>{
+   describe("Login form",()=>{
+     
+    it("has validation attr", () => {
+      cy.get('input').should(
+        "have.attr",
+        "required"
+      );
+    });
+    it("has submit button", () => {
+      cy.get('button[type="submit"]').should("have.text", "Login");
+    });
+    
+  })
+
+
+  it("should check if login elements exist",()=>{
       // Find the form by its ID and interact with input fields within it
     cy.get("#login-form").within(() => {
       cy.get('input[name="username"]').should('exist');
