@@ -1,15 +1,15 @@
 describe("Login Test", () => {
+  beforeEach(()=>{
+    // Visit your login page using the relative path
+    cy.visit("../../login.html");
+  })
   
   it('should visit the page',()=>{
-        cy.visit("../../login.html");
-        cy.get('form')
+        cy.get('form').should('exist')
   })
 
   it("should check if login element exist",()=>{
-    // Visit your login page using the relative path
-    cy.visit("../../login.html");
-
-    // Find the form by its ID and interact with input fields within it
+      // Find the form by its ID and interact with input fields within it
     cy.get("#login-form").within(() => {
       cy.get('input[name="username"]').should('exist');
       cy.get('input[name = "password"][type = "password"]').should("exist");
@@ -18,9 +18,6 @@ describe("Login Test", () => {
   })
 
   it("should log in successfully", () => {
-    // Visit your login page using the relative path
-    cy.visit("../../login.html");
-
     // Find the  form by its ID and interact with input fields within it
     cy.get("#login-form").within(() => {
       cy.get('input[name="username"]').type("sampleuser");
@@ -33,8 +30,6 @@ describe("Login Test", () => {
   });
 
   it("should handle login failure", () => {
-    // Visit your login page using the relative path
-    cy.visit("../../login.html");
 
     // Find the form by its ID and interact with input fields within it
     cy.get("#login-form").within(() => {
