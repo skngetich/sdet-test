@@ -1,4 +1,33 @@
-# sdet-test
+# Testing
+
+## Requirements
+
+Dev environment
+
+1. NodeJS 
+
+Testing Framework
+
+1. Cypress 
+
+Running the program
+
+```js
+
+// Check node version
+node -v
+
+// Check npm version
+npm -v
+
+// Install packages
+npm i
+
+// Run test
+
+npm run cy:open
+
+```
 
 ## Question 2
 
