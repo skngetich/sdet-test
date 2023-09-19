@@ -5,7 +5,7 @@
 ### total number of tasks in the database
 
 ```sql
-SELECT COUNT(*) AS total_tasks FROM task;
+SELECT COUNT(*) AS total_tasks FROM task_manager.tasks;
 
 ```
 
@@ -15,18 +15,16 @@ SELECT COUNT(*) AS total_tasks FROM task;
 
 ```sql
 SELECT COUNT(*) AS completed_tasks
-FROM task
+FROM task_manager.tasks
 WHERE task_completed = 1;
 
 ```
-
-- check updating of task
 
 ### The number of tasks assigned to each unique user
 
 ```sql
 SELECT task_assignee, COUNT(*) AS tasks_assigned
-FROM task
+FROM task_manager.tasks
 GROUP BY task_assignee;
 
 ```
